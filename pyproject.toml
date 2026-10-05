@@ -1,0 +1,32 @@
+[project]
+name = "tznow"
+version = "0.1.0"
+description = "Show current time in multiple timezones at once"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+tznow = "tznow.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["tznow"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=5.0.0",
+]
