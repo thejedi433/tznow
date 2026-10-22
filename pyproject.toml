@@ -2,7 +2,7 @@
 name = "tznow"
 version = "0.1.0"
 description = "Show current time in multiple timezones at once"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = []
 
 [project.scripts]
